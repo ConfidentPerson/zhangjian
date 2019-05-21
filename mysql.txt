@@ -1,0 +1,12 @@
+mysql> create database ewsdb;
+mysql> show databases;
+
+mysql> use ewsdb;
+Database changed
+mysql> show tables;
+
+mysql> create table tb_user(id int primary key auto_increment,uname varchar(20) not null ,upwd varchar(50) not null,email varchar(30),role varchar(20),registerTime date,lastLoginTime date);
+
+mysql> desc tb_user;
+
+mysql> insert into tb_user(id,uname,upwd,email,role,registerTime,lastLoginTime) values(null,'laozhang',md5('111111'),'abc@163.com','admin',now(),now());
